@@ -1,4 +1,5 @@
 import styles from './QuestionComponent.module.css';
+import Image from 'next/image';
 
 const QuestionComponent = ({ question }) => {
 
@@ -7,7 +8,7 @@ const QuestionComponent = ({ question }) => {
     const displayItems = itemsForDisplay.map(opt =>
         <li key={ opt.key } className={styles.answer}>
             <span className={styles.text}>{opt.text}</span>
-            <img className={styles.image} src={ opt.src } alt={ opt.text } />
+            <Image className={styles.image} src={ '/' + opt.src } alt={ opt.text } width="300" height="300"/>
             <span className={styles.letter}>{ opt.key }</span>
         </li>
     );

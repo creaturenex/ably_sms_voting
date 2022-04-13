@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 const ably = new Ably.Realtime.Promise({ authUrl: '/api/createTokenRequest' });
 
 // this is equivalent channel.get but for a hook
-export function useChannel(channelName, callbackOnMessage, rewind = false) {
+export function UseChannel(channelName, callbackOnMessage, rewind = false) {
     const rewindParam = "[?rewind=1]";
     const getChannel = rewind ? rewindParam + channelName : channelName;
     const channel = ably.channels.get(getChannel);
@@ -29,10 +29,10 @@ export function useChannel(channelName, callbackOnMessage, rewind = false) {
 };
 
 // hook that returns the last message from the channel
-export function readLastAblyMessage(channelName, callbackOnMessage) {
+export function ReadLastAblyMessage(channelName, callbackOnMessage) {
     const [synced, setSynced] = useState(false);
 
-    const [statusChannel, ably] = useChannel(channelName, async (message) => {
+    const [statusChannel, ably] = UseChannel(channelName, async (message) => {
 
          if (!synced) {
             setSynced(true);

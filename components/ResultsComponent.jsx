@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useChannel, readLastAblyMessage, leadingClientSends } from "./AblyReactEffect";
+import { UseChannel, ReadLastAblyMessage } from "./AblyReactEffect";
 import styles from './ResultsComponent.module.css';
 import { parseSms } from "./parseSms";
 
@@ -11,11 +11,11 @@ const ResultsComponent = ({ question }) => {
     const [votes, setVotes] = useState(initialScores);
 
     // read last message and set votes so new clients are in sync with others
-    const [statusChannel] = readLastAblyMessage("sms-notifications-votes", async (lastMessage) => {
+    const [statusChannel] = ReadLastAblyMessage("sms-notifications-votes", async (lastMessage) => {
         setVotes(lastMessage.data);
     });
 
-    const [channel, ably] = useChannel("sms-notifications", async (message) => {
+    const [channel, ably] = UseChannel("sms-notifications", async (message) => {
         const sms = parseSms(message);
         const value = sms.text.toUpperCase();
 
