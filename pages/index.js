@@ -20,7 +20,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@creaturenex" />
         <meta property="og:url" content="https://omr-ably-sms-voting.vercel.app/" />
         <meta property="og:title" content="Which cookie is the best?" />
-        <meta property="og:description" content="Text A, B, C or D to vote!" />
+        <meta property="og:description" content="Text A or B vote!" />
         <meta property="og:image" content="https://sms-vote.vercel.app/images/tw.png" />
       </Head>
       <main className={styles.main} style={{ background: "linear-gradient(#FF5516, #E40000)" }}>
@@ -43,7 +43,7 @@ export default function Home() {
         <a className={styles.ably} href="https://ably.com/" target="_blank" rel="noopener noreferrer">
           Ably
         </a>
-        <a className={styles.github} href="https://github.com/ably-labs/vonage-vercel-voting">Fork it on Github</a>
+        <a className={styles.github} href="https://github.com/creaturenex/ably_sms_voting">Fork it on Github</a>
       </footer>
     </div>
   )
@@ -52,12 +52,10 @@ export default function Home() {
 
 function getQuestion() {
   return {
-    text: "Which cookie is the best?",
+    text: "Which of these is a biscuit?",
     options: [
         { key: "A", text: "Jammy Dodger", votes: 0, src: "images/jamiedodger.jpg" },
-        { key: "B", text: "Oreo", votes: 0, src: "images/oreo.jpg" },
-        { key: "C", text: "Bourbon", votes: 0, src: "images/bourbon.jpg" },
-        { key: "D", text: "Custard cream", votes: 0, src: "images/custardcream.jpg" }
+        { key: "B", text: "Pillsbury", votes: 0, src: "images/biscuit.jpg" }
     ]
   };
 }
