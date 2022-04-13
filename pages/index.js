@@ -25,7 +25,7 @@ export default function Home() {
       <main className={styles.main}>
       <header className={styles.header}>
         <img src="/images/smsvote.svg" alt="sms vote" className={styles.logo}/>
-        <h1 className={styles.title}>Text: (+44) 7451270716<br />to vote</h1>
+        <h1 className={styles.title}>Text: (+1)8882635045<br />to vote</h1>
       </header>
         <QuestionsComponent question={question} />
         <ResultsComponent question={question} />
