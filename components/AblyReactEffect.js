@@ -26,7 +26,7 @@ export function useChannel(channelName, callbackOnMessage, rewind = false) {
     useEffect(useEffectHook);
 
     return [channel, ably];
-}
+};
 
 // hook that returns the last message from the channel
 export function readLastAblyMessage(channelName, callbackOnMessage) {
@@ -41,4 +41,4 @@ export function readLastAblyMessage(channelName, callbackOnMessage) {
     }, true);
 
     return [statusChannel, ably];
-}
+};
