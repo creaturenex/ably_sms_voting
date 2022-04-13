@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import dynamic from 'next/dynamic';
 
@@ -24,7 +25,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
       <header className={styles.header}>
-        <img src="/images/smsvote.svg" alt="sms vote" className={styles.logo}/>
+        <Image src="/smsvote.svg" alt="sms vote" className={styles.logo} width="300" height="300"/>
         <h1 className={styles.title}>Text: (+1)8882635045<br />to vote</h1>
       </header>
         <QuestionsComponent question={question} />
