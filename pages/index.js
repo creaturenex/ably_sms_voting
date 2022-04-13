@@ -13,17 +13,17 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Romero Ably Voting</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@ablyrealtime" />
-        <meta name="twitter:creator" content="@thisisjfrank" />
-        <meta property="og:url" content="https://sms-vote.vercel.app/" />
-        <meta property="og:title" content="Which biscuit is best?" />
+        <meta name="twitter:creator" content="@creaturenex" />
+        <meta property="og:url" content="https://omr-ably-sms-voting.vercel.app/" />
+        <meta property="og:title" content="Which cookie is the best?" />
         <meta property="og:description" content="Text A, B, C or D to vote!" />
         <meta property="og:image" content="https://sms-vote.vercel.app/images/tw.png" />
       </Head>
-      <main className={styles.main}>
+      <main className={styles.main} style={{ background: "linear-gradient(#FF5516, #E40000)" }}>
       <header className={styles.header}>
         <Image src="/smsvote.svg" alt="sms vote" className={styles.logo} width="300" height="300"/>
         <h1 className={styles.title}>Text: (+1)8882635045<br />to vote</h1>
@@ -32,7 +32,7 @@ export default function Home() {
         <ResultsComponent question={question} />
       </main>
 
-      <footer className={styles.footer}>
+      <footer className={styles.footer}style={{ background: "linear-gradient(#E40000, #FF5516)" }}>
         <p className={styles.powered}>Powered by</p>
         <a className={styles.vercel} href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">Vercel</a>
           <span className={styles.plus}>+</span>
@@ -52,7 +52,7 @@ export default function Home() {
 
 function getQuestion() {
   return {
-    text: "Which biscuit is best?",
+    text: "Which cookie is the best?",
     options: [
         { key: "A", text: "Jammy Dodger", votes: 0, src: "images/jamiedodger.jpg" },
         { key: "B", text: "Oreo", votes: 0, src: "images/oreo.jpg" },
